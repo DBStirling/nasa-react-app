@@ -44,10 +44,43 @@ footer {
   left: 0;
   width: 100%;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer h2 {
+  font-size: 1.4rem;
+}
+
+footer h1 {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+footer button {
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  margin-right: auto;
+  padding: 1rem;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+footer button i {
+  font-size: 1.3rem;
+}
+
+footer button:hover {
+  opacity: 0.7;
 }
 
 .bgGradient {
@@ -97,17 +130,32 @@ footer {
   border: none;
   outline: none;
   margin-right: auto;
+  padding: 1rem;
+  transition-duration: 200ms;
+  cursor: pointer;
 }
+
+.sidebarContents button i {
+  font-size: 1.3rem;
+}
+
+.sidebarContents button:hover {
+  opacity: 0.7;
+}
+
+
 
 @media (min-width: 640px) {
   .sidebar {
     position: relative;
     inset: unset;
     min-width: 30%;
+    max-height: 100vh;
     box-shadow: 0 0 20px 1px #030615;
   }
 
   .sidebarContents {
     margin: unset;
+    width: 100%;
   }
 }

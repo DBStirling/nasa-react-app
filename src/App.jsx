@@ -5,13 +5,18 @@ import SideBar from "./components/SideBar"
 
 function App() {
   const [showModal, setShowModal] = useState(false) // default value = false
+  
+  function handleToggleModal() {
+    setShowModal(!showModal)
+  }
+  
   return (
     <>
       <Main/>
       {showModal && ( // conditional statement, if showModal is true, it opens sideBar
-        <SideBar/>
+        <SideBar handleToggleModal={handleToggleModal}/>
       )}
-      <Footer/>
+      <Footer handleToggleModal={handleToggleModal}/>
     </>
   )
 }
