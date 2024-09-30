@@ -1,14 +1,14 @@
 export default function SideBar(props) {
-    const {handleToggleModal, showModal} = props
+    const {handleToggleModal, showModal, data} = props
     
     return (
         <div className="sidebar">
             <div className="bgOverlay" onClick={handleToggleModal}></div>
             <div className="sidebarContents">
-                <h2>The Baron but Beautiful Martian Landscape</h2>
-                <div>
-                    <p>Description</p>
-                    <p>gbyberflb evev geg cgeivg ;evievl bebhv livhjwc</p>
+                <h2>{data?.title}</h2>
+                <div className="descriptionContainer">
+                    <p className="descriptionTitle">{data?.date}</p>
+                    <p className="descriptionText">{data?.explanation}</p>
                 </div>
                 <button onClick={handleToggleModal}>
                     <i className="fa-solid fa-circle-chevron-right"></i>
